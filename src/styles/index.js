@@ -14,12 +14,13 @@ export const styles = StyleSheet.create({
     backgroundColor: themeWhite,
     padding: 5,
   },
+
+  // Home Page
   homeContainer: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
   },
-  // Image
   imgContainer: {
     marginTop: 30,
     width: 250,
@@ -39,7 +40,6 @@ export const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
   },
-  // Round Button
   roundButton: {
     marginLeft: 30,
     marginRight: 30,
@@ -56,6 +56,7 @@ export const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 20,
   },
+
   // Conversation page
   convHeading: {
     fontSize: 18,
@@ -65,5 +66,5 @@ export const styles = StyleSheet.create({
   convNo: {
     fontWeight: 'bold',
     color: 'red',
-  }
+  },
 });
