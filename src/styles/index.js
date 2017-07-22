@@ -59,19 +59,19 @@ export const styles = StyleSheet.create({
 
   // Conversation page
   convHeading: {
+    marginTop: 15,
     fontSize: 18,
     textAlign: 'center',
-    marginTop: 30,
   },
   convNo: {
     fontWeight: 'bold',
-    color: 'red',
+    color: 'brown',
   },
   convContainer: {
     margin: 10,
   },
   convCard: {
-    marginTop: 10,
+    marginTop: 20,
     padding: 20,
     borderWidth: 3,
     borderColor: themeBlack,
