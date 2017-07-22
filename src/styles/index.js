@@ -15,7 +15,8 @@ export const styles = StyleSheet.create({
   imgContainer: {
     width: 250,
     height: 250,
-    backgroundColor: 'brown',
+    borderColor: '#000',
+    borderWidth: 3,
   },
   buttonContainer: {
     marginTop: 40,
