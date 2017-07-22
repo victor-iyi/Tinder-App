@@ -16,31 +16,37 @@ class Home extends Component {
     }
     // bindings
     this.goToConversation = this.goToConversation.bind(this);
+    this.nextUser = this.nextUser.bind(this);
+
   }
+
   static navigationOptions = {
     title: 'Home page',
   };
 
   goToConversation() {
-    this.props.navigation.navigate('Conversation', { user: this.state.userImg } );
+    this.props.navigation.navigate('Conversation', { users: this.state.user } );
+  }
+
+  nextUser() {
+    Alert.alert('Next user please??!!');
   }
 
   render() {
-
     return (
       <View style={styles.container}>
         <View style={styles.homeContainer}>
           <View style={styles.imgContainer}>
             <Image source={this.state.userImg} style={styles.img} />
           </View>
+
           <View style={styles.buttonContainer}>
-            <RoundButton img={this.state.dislike} title='Dislike' onPress={() => { Alert.alert('dislike!'); }} />
+            <RoundButton img={this.state.dislike} title='Dislike' onPress={this.nextUser} />
             <RoundButton img={this.state.like} title='Like' onPress={this.goToConversation} />
           </View>
-          </View>
+        </View>
       </View>
     );
-
   }
 
 }

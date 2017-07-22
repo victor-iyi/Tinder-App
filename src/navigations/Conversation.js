@@ -4,6 +4,19 @@ import { styles } from '../styles';
 
 class Conversation extends Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      users: this.props.navigation.state.params.users,
+    };
+    // bindings
+    this.goToChat = this.goToChat.bind(this);
+  }
+
+  goToChat(user) {
+    this.props.navigation.navigate('Chat', { user: user});
+  }
+
   static navigationOptions = {
     title: 'Conversation Lists',
   };
@@ -13,7 +26,7 @@ class Conversation extends Component {
       <View style={styles.container}>
         <Text style={styles.convHeading}>
           User(s) you have been matched with 
-          <Text style={styles.convNo}> [{this.props.navigation.state.params.user}]</Text>
+          <Text style={styles.convNo}> [{this.state.users}]</Text>
         </Text>
       </View>
     );
