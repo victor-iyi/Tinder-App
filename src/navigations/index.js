@@ -1,6 +1,7 @@
 import { StackNavigator } from 'react-navigation';
 import Home from './Home';
 import Conversation from './Conversation';
+import Chat from './Chat';
 
 export default StackNavigator({
   Home: {
@@ -8,5 +9,8 @@ export default StackNavigator({
   },
   Conversation: {
     screen: Conversation,
+  },
+  Chat: {
+    screen: Chat,
   },
 });

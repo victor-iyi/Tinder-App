@@ -8,10 +8,11 @@ class Conversation extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      users: this.props.navigation.state.params.users,
+      users: ['John Doe', 'Jane Doe', 'Janie Doe', 'Jimmy Doe', 'John Smit'],
+      user: '',
     };
     // bindings
-    this.goToChat = this.goToChat.bind(this);
+    this.startChatting = this.startChatting.bind(this);
     this.renderConversationList = this.renderConversationList.bind(this);
   }
 
@@ -19,31 +20,31 @@ class Conversation extends Component {
     title: 'Conversation Lists',
   };
 
-  renderUser(user, index) {
-    console.log('Index', index);
-    return <ConversationCard key={index} text={user} onPress={() => Alert.alert(`User: ${user}`) } />
+
+  startChatting(user) {
+    this.props.navigation.navigate('Chat', { user });
   }
 
+  // renderUser(user, index) {
+  //   return <ConversationCard key={index} text={user} onPress={this.startChatting} />
+  // }
+
   renderConversationList() {
-    const users = ['John Doe', 'Jane Doe', 'Janie Doe', 'Jimmy Doe', 'John Smit'];
     return (
       <View style={styles.convList}>
-        {users.map(this.renderUser)}
+        { 
+          this.state.users.map((user, index) => <ConversationCard key={index} text={user} onPress={() => this.startChatting(user)}  />) 
+        }
       </View>
     )
   }
-
-  goToChat(user) {
-    this.props.navigation.navigate('Chat', { user: user});
-  }
-
 
   render() {
     return (
       <View style={styles.container}>
         <Text style={styles.convHeading}>
-          User(s) you have been matched with 
-          <Text style={styles.convNo}> [{this.state.users}]</Text>
+          Users you have been matched with 
+          <Text style={styles.convNo}> [{this.state.users.length}]</Text>
         </Text>
           {this.renderConversationList()}
       </View>
