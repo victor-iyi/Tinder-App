@@ -67,4 +67,18 @@ export const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: 'red',
   },
+  convContainer: {
+    margin: 10,
+  },
+  convCard: {
+    marginTop: 10,
+    padding: 20,
+    borderWidth: 3,
+    borderColor: themeBlack,
+  },
+  convCardText: {
+    fontSize: 16,
+    color: themeBlack,
+    textAlign: 'left',
+  },
 });

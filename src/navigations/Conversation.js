@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Alert } from 'react-native';
+import ConversationCard from '../components/ConversationCard';
 import { styles } from '../styles';
 
 class Conversation extends Component {
@@ -11,15 +12,31 @@ class Conversation extends Component {
     };
     // bindings
     this.goToChat = this.goToChat.bind(this);
+    this.renderConversationList = this.renderConversationList.bind(this);
+  }
+
+  static navigationOptions = {
+    title: 'Conversation Lists',
+  };
+
+  renderUser(user, index) {
+    console.log('Index', index);
+    return <ConversationCard key={index} text={user} onPress={() => Alert.alert(`User: ${user}`) } />
+  }
+
+  renderConversationList() {
+    const users = ['John Doe', 'Jane Doe', 'Janie Doe', 'Jimmy Doe', 'John Smit'];
+    return (
+      <View style={styles.convList}>
+        {users.map(this.renderUser)}
+      </View>
+    )
   }
 
   goToChat(user) {
     this.props.navigation.navigate('Chat', { user: user});
   }
 
-  static navigationOptions = {
-    title: 'Conversation Lists',
-  };
 
   render() {
     return (
@@ -28,6 +45,7 @@ class Conversation extends Component {
           User(s) you have been matched with 
           <Text style={styles.convNo}> [{this.state.users}]</Text>
         </Text>
+          {this.renderConversationList()}
       </View>
     );
   }
