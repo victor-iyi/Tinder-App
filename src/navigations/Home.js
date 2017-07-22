@@ -11,8 +11,8 @@ class Home extends Component {
     this.state = {
       like: require('../../img/like.png'),
       dislike: require('../../img/dislike.png'),
-      userImg: require('../../img/person.png'),
-      user: 'John Doe',
+      user: { name: 'PumpkinCat', 
+              img:require('../../img/person.png') },
     }
     // bindings
     this.goToConversation = this.goToConversation.bind(this);
@@ -25,7 +25,7 @@ class Home extends Component {
   };
 
   goToConversation() {
-    this.props.navigation.navigate('Conversation', { users: this.state.user } );
+    this.props.navigation.navigate('Conversation', { users: this.state.user.name } );
   }
 
   nextUser() {
@@ -37,7 +37,7 @@ class Home extends Component {
       <View style={styles.container}>
         <View style={styles.homeContainer}>
           <View style={styles.imgContainer}>
-            <Image source={this.state.userImg} style={styles.img} />
+            <Image source={this.state.user.img} style={styles.img} />
           </View>
 
           <View style={styles.buttonContainer}>

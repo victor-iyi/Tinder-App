@@ -28,7 +28,7 @@ class Conversation extends Component {
       <View style={styles.convList}>
         { this.state.users.map( (user, index) => <ConversationCard key={index} text={user} onPress={() => this.startChatting(user)} />) }
       </View>
-    )
+    );
   }
 
   render() {
