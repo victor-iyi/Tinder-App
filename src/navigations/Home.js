@@ -11,24 +11,33 @@ class Home extends Component {
     this.state = {
       like: require('../../img/like.png'),
       dislike: require('../../img/dislike.png'),
-      personImg: require('../../img/person.png'),
+      userImg: require('../../img/person.png'),
+      user: 'John Doe',
     }
+    // bindings
+    this.goToConversation = this.goToConversation.bind(this);
   }
   static navigationOptions = {
     title: 'Home page',
   };
 
+  goToConversation() {
+    this.props.navigation.navigate('Conversation', { user: this.state.userImg } );
+  }
+
   render() {
 
     return (
       <View style={styles.container}>
-        <View style={styles.imgContainer}>
-          <Image source={this.state.personImg} style={styles.img} />
-        </View>
-        <View style={styles.buttonContainer}>
-          <RoundButton img={this.state.dislike} title='Dislike' onPress={() => { Alert.alert('dislike!'); }} />
-          <RoundButton img={this.state.like} title='Like' onPress={() => { Alert.alert('like!'); }} />
-        </View>
+        <View style={styles.homeContainer}>
+          <View style={styles.imgContainer}>
+            <Image source={this.state.userImg} style={styles.img} />
+          </View>
+          <View style={styles.buttonContainer}>
+            <RoundButton img={this.state.dislike} title='Dislike' onPress={() => { Alert.alert('dislike!'); }} />
+            <RoundButton img={this.state.like} title='Like' onPress={this.goToConversation} />
+          </View>
+          </View>
       </View>
     );
 

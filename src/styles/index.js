@@ -13,6 +13,9 @@ export const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: themeWhite,
     padding: 5,
+  },
+  homeContainer: {
+    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -53,4 +56,14 @@ export const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 20,
   },
+  // Conversation page
+  convHeading: {
+    fontSize: 18,
+    textAlign: 'center',
+    marginTop: 30,
+  },
+  convNo: {
+    fontWeight: 'bold',
+    color: 'red',
+  }
 });
