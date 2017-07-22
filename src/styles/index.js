@@ -1,5 +1,9 @@
 import { StyleSheet } from 'react-native';
 
+const themeBlack = '#080808';
+const themeWhite = '#fff';
+
+
 export const styles = StyleSheet.create({
   wrapper: {
     flex: 1,
@@ -7,18 +11,46 @@ export const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: themeWhite,
     padding: 5,
     justifyContent: 'center',
     alignItems: 'center',
   },
+  // Image
   imgContainer: {
+    marginTop: 30,
     width: 250,
     height: 250,
-    borderColor: '#000',
     borderWidth: 3,
+    borderColor: themeBlack,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  img: {
+    width: 240,
+    height: 240,
   },
   buttonContainer: {
-    marginTop: 40,
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  // Round Button
+  roundButton: {
+    marginLeft: 30,
+    marginRight: 30,
+    width: 75,
+    height: 75,
+  },
+  roundButtonImg: {
+    width: 75,
+    height: 75,
+  },
+  roundButtonTitle: {
+    marginTop: 15,
+    color: themeBlack,
+    textAlign: 'center',
+    fontSize: 20,
   },
 });
