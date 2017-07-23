@@ -1,7 +1,9 @@
 import { StyleSheet } from 'react-native';
 
-const themeBlack = '#080808';
+const themeBlack = '#0a0a0a';
 const themeWhite = '#fff';
+const themeGray = '#eee';
+const themeDeepGray = '#999';
 
 
 export const styles = StyleSheet.create({
@@ -65,7 +67,7 @@ export const styles = StyleSheet.create({
   },
   convNo: {
     fontWeight: 'bold',
-    color: 'brown',
+    color: 'red',
   },
   convContainer: {
     margin: 10,
@@ -81,4 +83,41 @@ export const styles = StyleSheet.create({
     color: themeBlack,
     textAlign: 'left',
   },
+
+  // Chat Page 
+  chatContainer: {
+    padding: 5,
+    flex: 1,
+  },
+  chatArea: {
+    flex: 10,
+    padding: 5,
+    marginTop: 10,
+    marginBottom: 10,
+    overflow: 'scroll',
+    backgroundColor: themeGray,
+  },
+  chatMsgBox: {
+  
+  },
+  chatMsgText: {
+
+  },
+  isTyping: {
+    fontStyle: 'italic',
+    color: themeDeepGray,
+  },
+  chatInputContainer: {
+    flex: 1,
+    justifyContent: 'flex-end',
+    alignContent: 'flex-end',
+  },
+  chatInput: {
+    height: 50,
+    padding: 10,
+    borderRadius: 10,
+    color: themeBlack,
+    backgroundColor: themeGray,
+  },
+
 });
