@@ -38,7 +38,7 @@ class Conversation extends Component {
           Users you have been matched with:
           <Text style={styles.convNo}> {this.state.users.length} </Text>
         </Text>
-        {this.renderConversationList()}
+        { this.renderConversationList() }
       </ScrollView>
     );
   }

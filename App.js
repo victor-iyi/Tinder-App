@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import { AppRegistry, View } from 'react-native';
-import AppNavigator from './src/navigations';
+import React, { Component } from 'react'; 
+import { AppRegistry, StatusBar, View } from 'react-native'; 
+import AppNavigator from './src/navigators';
 import { styles } from './src/styles';
 
 class App extends Component {
@@ -8,6 +8,7 @@ class App extends Component {
   render() {
     return (
       <View style={styles.wrapper}>
+        <StatusBar barStyle="default" hidden={false} />
         <AppNavigator ref={nav => { this.navigation = nav; }} />
       </View>
     );
