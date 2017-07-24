@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { ScrollView, View, Text, Alert } from 'react-native';
-import ConversationCard from '../components/ConversationCard';
+import { ConversationCard } from '../components';
 import { styles } from '../styles';
 
 class Conversation extends Component {

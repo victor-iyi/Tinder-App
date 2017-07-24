@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { AppRegistry, View } from 'react-native';
 import AppNavigator from './src/navigations';
 import { styles } from './src/styles';
 
-class App extends React.Component {
+class App extends Component {
 
   render() {
     return (

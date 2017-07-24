@@ -2,7 +2,7 @@ import React from 'react';
 import { TouchableNativeFeedback, Platform, View, Text } from 'react-native';
 import { styles } from '../styles';
 
-const ConversationCard = (props) => {
+export default (props) => {
   return (
     <TouchableNativeFeedback
         onPress={props.onPress}
@@ -14,4 +14,3 @@ const ConversationCard = (props) => {
   );
 };
 
-export default ConversationCard;
