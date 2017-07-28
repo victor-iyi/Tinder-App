@@ -11,8 +11,17 @@ class Home extends Component {
     this.state = {
       like: require('../../img/like.png'),
       dislike: require('../../img/dislike.png'),
-      user: { name: 'PumpkinCat', 
-              img:require('../../img/person.png') },
+      user: { 
+        name: 'PumpkinCat', 
+        img:require('../../img/person.png') 
+      },
+      users: [
+        { name: 'Victor I. Afolabi', img: require('../../img/person.png') },
+        { name: 'Banjo Mofesola Paul', img: require('../../img/person.png') },
+        { name: 'Tomiide Oladipo', img: require('../../img/person.png') },
+        { name: 'Engr. Longe Dotun', img: require('../../img/person.png') },
+        { name: 'Ifedayo', img: require('../../img/person.png') },
+      ],
     }
     // bindings
     this.goToConversation = this.goToConversation.bind(this);
