@@ -22,6 +22,8 @@
     "expo": "^18.0.3",
     "react": "16.0.0-alpha.12",
     "react-native": "^0.45.1",
-    "react-navigation": "^1.0.0-beta.11"
+    "react-navigation": "^1.0.0-beta.11",
+    "react-native-dropdown-android": "0.0.12",
+    "react-native-elements": "^0.15.0"
   }
 }
