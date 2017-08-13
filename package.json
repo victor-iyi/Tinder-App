@@ -1,10 +1,11 @@
 {
   "name": "tinder-app",
+  "description": "A clone of the official Tinder Matching application. Cloned with react-native.",
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
-    "react-native-scripts": "0.0.50",
-    "jest-expo": "~18.0.0",
+    "react-native-scripts": "1.0.0",
+    "jest-expo": "~19.0.0",
     "react-test-renderer": "16.0.0-alpha.12"
   },
   "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
@@ -15,15 +16,24 @@
     "ios": "react-native-scripts ios",
     "test": "node node_modules/jest/bin/jest.js --watch"
   },
+  "keywords": [
+    "tinder",
+    "tinder-clone",
+    "react-native",
+    "react",
+    "dating",
+    "match",
+    "matching"
+  ],
   "jest": {
     "preset": "jest-expo"
   },
   "dependencies": {
-    "expo": "^18.0.3",
+    "expo": "^19.0.0",
     "react": "16.0.0-alpha.12",
-    "react-native": "^0.45.1",
-    "react-navigation": "^1.0.0-beta.11",
-    "react-native-dropdown-android": "0.0.12",
-    "react-native-elements": "^0.15.0"
+    "react-native": "^0.46.1",
+    "react-native-elements": "^0.15.0",
+    "react-native-ui-stepper": "^1.1.0",
+    "react-navigation": "^1.0.0-beta.11"
   }
 }
