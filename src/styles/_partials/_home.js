@@ -2,27 +2,27 @@ const color = require('./_vars/_colors');
 
 module.exports = {
   // Home Page
-  homeContainer: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  imgContainer: {
-    width: 300, 
-    height: 350,
-
-  },
-  img: {
+  card: {
     width: 300,
     height: 350,
     borderRadius: 10,
   },
-  imgText: {
+  cardImg: {
+    width: 300,
+    height: 350,
+    borderRadius: 10,  
+  },
+  cardText: {
     position: "absolute",
     left: 15,
     bottom: 10,
     fontSize: 30,
     color: color.black,
     justifyContent: 'center',
+  },
+  img: {
+    width: 300,
+    height: 350,
+    borderRadius: 10,
   },
 };

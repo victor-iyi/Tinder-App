@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Text, View, Button, Image, Alert } from "react-native";
-import { SwipeDeck, Card } from "react-native-elements";
+import { SwipeDeck, Card, Icon } from "react-native-elements";
 import { RoundButton } from "../components";
 import { styles } from "../styles";
 
@@ -70,36 +70,32 @@ class Home extends Component {
   }
 
   renderCard(card) {
+    {/* 
+     * 
+     <Card
+       key={card.id}
+       containerStyle={styles.imgContainer}
+       featuredTitle={`${card.name}, ${card.age}`}
+       featuredTitleStyle={styles.imgText}
+       image={ card.img }
+       imageStyle={styles.img}
+     />
+     */}
     return (
-      <Card
-        key={card.id}
-        containerStyle={ styles.imgContainer  }
-        featuredTitle={`${card.name}, ${card.age}`}
-        featuredTitleStyle={styles.imgText}
-        image={{ source: card.img }}
-        imageStyle={ styles.img }
-      />
+       <Card containerStyle={ styles.card }>
+        <Image source={card.img} style={styles.cardImg} width={300} height={350} />
+        <Text style={styles.cardText}>{card.name}</Text>
+       </Card>      
     );
   }
 
   renderNoMoreCards() {
-    return (
-      <Card
-        containerStyle={{
-          borderRadius: 10,
-          width: 300,
-          height: 300
-        }}
-        featuredTitle="No more cards"
-        featuredTitleStyle={{ fontSize: 25 }}
-        image={{ source: require("../../img/person.png") }}
-        imageStyle={{
-          borderRadius: 10,
-          width: 300,
-          height: 300
-        }}
-      />
-    );
+     return (
+      <Card containerStyle={ styles.card }>
+       <Image source={card.img} style={styles.cardImg} width={300} height={350} />
+       <Text style={styles.cardText}>Oops! That's all the users we got for now!</Text>
+      </Card>      
+   );
   }
 
   render() {
@@ -112,6 +108,14 @@ class Home extends Component {
           onSwipeRight={this.onSwipeRight}
           onSwipeLeft={this.onSwipeLeft}
         />
+        <View>
+          <Icon
+            name="heartbeat"
+            type="font-awesome"
+            color="#f00"
+            onPress={() => console.log("hello")}
+          />
+        </View>
       </View>
     );
   }
