@@ -89,10 +89,10 @@ class Home extends Component {
     return (
       <Card containerStyle={styles.card}>
         <Image
-          source={card.img}
-          // style={styles.cardImg}
+          source={ require('../../img/person.png') }
+          style={styles.cardImg}
           width={300}
-          height={350}
+          height={300}
         />
         <Text style={styles.cardText}>
           Oops! That's all the users we got for now!

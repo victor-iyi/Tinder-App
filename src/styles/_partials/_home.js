@@ -5,24 +5,28 @@ module.exports = {
   card: {
     width: 300,
     height: 350,
-    borderRadius: 10
+    borderRadius: 10,
+    padding: 10,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   cardImg: {
     width: 300,
-    height: 350,
+    height: 300,
     borderRadius: 10
   },
   cardText: {
     position: "absolute",
     left: 15,
-    bottom: 20,
+    right: 15,
+    bottom: 10,
     fontSize: 30,
-    color: color.black,
-    textAlign: "center"
+    textAlign: 'center',
+    color: color.red,
   },
   img: {
     width: 300,
     height: 350,
-    borderRadius: 10
+    borderRadius: 10,
   },
 };
