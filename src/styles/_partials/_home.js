@@ -8,38 +8,21 @@ module.exports = {
     alignItems: 'center',
   },
   imgContainer: {
-    marginTop: 30,
-    width: 250,
-    height: 250,
-    borderWidth: 3,
-    borderColor: color.black,
-    justifyContent: 'center',
-    alignItems: 'center',
+    width: 300, 
+    height: 350,
+
   },
   img: {
-    width: 240,
-    height: 240,
+    width: 300,
+    height: 350,
+    borderRadius: 10,
   },
-  buttonContainer: {
-    flex: 1,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-  },
-  roundButton: {
-    marginLeft: 30,
-    marginRight: 30,
-    width: 75,
-    height: 75,
-  },
-  roundButtonImg: {
-    width: 75,
-    height: 75,
-  },
-  roundButtonTitle: {
-    marginTop: 15,
+  imgText: {
+    position: "absolute",
+    left: 15,
+    bottom: 10,
+    fontSize: 30,
     color: color.black,
-    textAlign: 'center',
-    fontSize: 20,
+    justifyContent: 'center',
   },
 };
