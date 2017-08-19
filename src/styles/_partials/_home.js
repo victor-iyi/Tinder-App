@@ -38,7 +38,6 @@ module.exports = {
     flexDirection: 'row',
     justifyContent: 'space-around',
     alignItems: 'center',
-    backgroundColor: color.grey,
   },
   iconContainer: {
   },
