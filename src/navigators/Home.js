@@ -111,7 +111,7 @@ class Home extends Component {
           onSwipeRight={this.onSwipeRight}
           onSwipeLeft={this.onSwipeLeft}
         />
-        <View style={styles.iconWrapper}>
+        <View style={styles.iconWrap}>
           <Icon
             name="refresh"
             type="font-awesome"

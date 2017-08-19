@@ -29,7 +29,7 @@ module.exports = {
     height: 350,
     borderRadius: 10
   },
-  iconWrapper: {
+  iconWrap: {
     position: "absolute",
     bottom: 10,
     left: 10,
