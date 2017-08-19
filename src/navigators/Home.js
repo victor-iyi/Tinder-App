@@ -117,7 +117,7 @@ class Home extends Component {
             type="font-awesome"
             raised
             size={30}
-            color='#f00'
+            color="#f00"
             iconStyle={styles.icon}
             containerStyle={styles.iconContainer}
             onPress={() => console.log("refresh")}
