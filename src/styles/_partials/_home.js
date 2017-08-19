@@ -29,4 +29,19 @@ module.exports = {
     height: 350,
     borderRadius: 10,
   },
+  iconWrapper: {
+    position: 'absolute',
+    bottom: 10,
+    left: 10,
+    right: 10,
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    backgroundColor: color.grey,
+  },
+  iconContainer: {
+  },
+  icon: {
+  },
 };

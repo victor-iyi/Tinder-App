@@ -89,7 +89,7 @@ class Home extends Component {
     return (
       <Card containerStyle={styles.card}>
         <Image
-          source={ require('../../img/person.png') }
+          source={require("../../img/person.png")}
           style={styles.cardImg}
           width={300}
           height={300}
@@ -111,12 +111,42 @@ class Home extends Component {
           onSwipeRight={this.onSwipeRight}
           onSwipeLeft={this.onSwipeLeft}
         />
-        <View>
+        <View style={styles.iconWrapper}>
           <Icon
-            name="heartbeat"
+            name="refresh"
             type="font-awesome"
-            color="#f00"
-            onPress={() => console.log("hello")}
+            raised
+            size={30}
+            iconStyle={styles.icon}
+            containerStyle={styles.iconContainer}
+            onPress={() => console.log("refresh")}
+          />
+          <Icon
+            name="close"
+            type="font-awesome"
+            raised
+            size={50}
+            iconStyle={styles.icon}
+            containerStyle={styles.iconContainer}
+            onPress={() => console.log("close")}
+          />
+          <Icon
+            name="heart"
+            type="font-awesome"
+            raised
+            size={50}
+            iconStyle={styles.icon}
+            containerStyle={styles.iconContainer}
+            onPress={() => console.log("heart")}
+          />
+          <Icon
+            name="map-marker"
+            type="font-awesome"
+            raised
+            size={30}
+            iconStyle={styles.icon}
+            containerStyle={styles.iconContainer}
+            onPress={() => console.log("map-marker")}
           />
         </View>
       </View>
