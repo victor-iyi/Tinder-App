@@ -70,32 +70,35 @@ class Home extends Component {
   }
 
   renderCard(card) {
-    {/* 
-     * 
-     <Card
-       key={card.id}
-       containerStyle={styles.imgContainer}
-       featuredTitle={`${card.name}, ${card.age}`}
-       featuredTitleStyle={styles.imgText}
-       image={ card.img }
-       imageStyle={styles.img}
-     />
-     */}
     return (
-       <Card containerStyle={ styles.card }>
-        <Image source={card.img} style={styles.cardImg} width={300} height={350} />
-        <Text style={styles.cardText}>{card.name}</Text>
-       </Card>      
+      <Card containerStyle={styles.card}>
+        <Image
+          source={card.img}
+          style={styles.cardImg}
+          width={300}
+          height={350}
+        />
+        <Text style={styles.cardText}>
+          {card.name}
+        </Text>
+      </Card>
     );
   }
 
   renderNoMoreCards() {
-     return (
-      <Card containerStyle={ styles.card }>
-       <Image source={card.img} style={styles.cardImg} width={300} height={350} />
-       <Text style={styles.cardText}>Oops! That's all the users we got for now!</Text>
-      </Card>      
-   );
+    return (
+      <Card containerStyle={styles.card}>
+        <Image
+          source={card.img}
+          // style={styles.cardImg}
+          width={300}
+          height={350}
+        />
+        <Text style={styles.cardText}>
+          Oops! That's all the users we got for now!
+        </Text>
+      </Card>
+    );
   }
 
   render() {
